@@ -1,0 +1,27 @@
+<% provide(:title, 'Welcome to Register Page') %>
+
+ <%= form_for(@user) do |f|  %>
+   
+    <%= render 'shared/error_messages' , object: @user %>
+	
+	<p>
+	<%= f.label :username %> <br />
+	<%= f.text_field :username%>
+	</p>
+	
+	<p>
+	<%= f.label :password %> <br />
+	<%= f.password_field :password%> 
+	</p>
+ 
+    <p>
+    <%= f.label :password_confirmation, "Password Confirmation" %><br />
+	<%= f.password_field  :password_confirmation%>
+	</p>
+	
+	<%= f.submit 'Register' %>
+	
+	
+ 
+ 
+ <% end  %>

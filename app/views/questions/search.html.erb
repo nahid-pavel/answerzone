@@ -1,0 +1,20 @@
+<%= provide(:title, "Make It Snappy") %>
+
+<h1> Search Results </h1>
+<% if @questions.any? %>
+ 
+    <ul>
+	  <%= render @questions %>
+	</ul>
+	
+	<%= will_paginate %>
+ 
+ <% else %>
+   
+     <p> There is no result </p>
+    
+ <% end %>
+
+
+
+</div>
